@@ -1,5 +1,4 @@
 echo "cherry-picking bionic commits"
-cd bionic
 
 repopick 185989 186050 186051 185636 185640
 
