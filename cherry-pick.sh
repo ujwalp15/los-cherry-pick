@@ -60,6 +60,6 @@ echo "system/qcom commits picked successfully"
 
 echo "cherry-picking vendor/lineage commits"
 
-repopick 185491 187574 185521
+repopick 187951 185491 187574 185521
 
 echo "vendor/lineage commits picked successfully"
