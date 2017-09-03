@@ -1,7 +1,7 @@
 echo "cherry-picking bionic commits"
 cd bionic
 
-repopick 185990 185989 186050 186051 185636 185640
+repopick 185989 186050 186051 185636 185640
 
 echo "bionic commits picked successfully"
 
