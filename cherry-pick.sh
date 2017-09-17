@@ -2,14 +2,8 @@
 repopick 185640 # linker: Add support for dynamic SHIM libraries
 
 # build
-repopick 187372 #edify: bring back SetPermissionsRecursive
-repopick 187896 #edify: Don't append capabilities if path starts with /tmp
-repopick 187330 #build: ota: Support for install tools in /tmp/install
-repopick 187331 #releasetools: squash backuptool support
 repopick 187332 #releasetools: squash otasigcheck support
-repopick 187373 #Edify: Add abort message for bootloader asserts
 repopick 187374 #releasetools: ota_from_target_files: add FullOTA_PostValidate
-repopick 187375 #releasetools: allow devices to specify a custom make_recovery_patch
 
 # framework/base
 repopick 187851 # Enable NSRM (Network Socket Request Manager).
