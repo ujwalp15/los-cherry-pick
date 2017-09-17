@@ -1,65 +1,82 @@
-echo "cherry-picking bionic commits"
+# bionic
+repopick 185636 # linker: Make platform text relocations denial optional
+repopick 185640 # linker: Add support for dynamic SHIM libraries
 
-repopick 185989 186050 186051 185636 185640
+# bootable/recovery
+repopick 186286 # Revert "updater: Remove some obsoleted functions for file-based OTA."
 
-echo "bionic commits picked successfully"
+# build
+repopick 187372 #edify: bring back SetPermissionsRecursive
+repopick 187896 #edify: Don't append capabilities if path starts with /tmp
+repopick 187330 #build: ota: Support for install tools in /tmp/install
+repopick 187331 #releasetools: squash backuptool support
+repopick 187332 #releasetools: squash otasigcheck support
+repopick 187373 #Edify: Add abort message for bootloader asserts
+repopick 187374 #releasetools: ota_from_target_files: add FullOTA_PostValidate
+repopick 187375 #releasetools: allow devices to specify a custom make_recovery_patch
 
-echo "cherry-picking build commits"
+# build/soong
+repopick 188279 # soong: add support for nested structs in variableProperties
+repopick 188280 # soong: explicitly specify name of Lineage variables struct
 
-repopick 186687 185913 187329 187766 187894 187330 187331 187332 187372 187896 187373 187374 187375
+# external/tinycompress
+repopick 185936 # tinycompress: squash tinycompress fixes
+repopick 188064 # tinycompress: squash vendor specific tinycompress changes
+repopick 185937 # audio: compress error propagation
+repopick 185938 # compress: Extend cplay with support to offload path
+#185939 # tinycompress: Fix compilation on old targets
+repopick 189132 # tinycompress: Generate vendor specifc tinycompress
 
-echo "build commits picked successfully"
+# framework/base
+repopick 187851 # Enable NSRM (Network Socket Request Manager).
 
-echo "cherry-picking soong commits"
+# framework/native
+repopick 185671 # native: Restore VM memory overrides
 
-repopick 186003 186004 186005 186006 186074 186075
+# framework/opt/telephony
+repopick 188687 # telephony: Squash support for simactivation feature
 
-echo "soong commits picked successfully"
+# hardware/libhardware
+repopick 187643 # libhardware: add support for tertiary display
+repopick 187644 # libhardware: Only support tertiary display in QTI_BSP is defined
 
-echo "cherry-picking av commits"
+# hardware/ril-caf
+repopick 187764 # libril: Restore support for RIL v6, v8 and v9 stacks
+repopick 187765 # ril: Allow targets to disable Clang
 
-repopick 185875 185876 187558 187559 187560 187561 186580 186581 186712
+# hardware/qcom/wlan-caf
+repopick 187866 # wcnss-service: Additional format support
+repopick 187867 # wcnss: Build and dlopen wcnss_qmi_client as a shared library
+repopick 187868 # wcnss_qmi: Generate a fixed random mac address if the NV doesn't provide one
+repopick 187869 # wcnss_qmi: Allow targets to provide custom libwcnss_qmi
+repopick 187870 # wcnss_service: Deal with mdm-detect too
+repopick 187871 # wcnss_service: Migrate from QMI to QCCI
+repopick 187872 # wifi-hal: Only try LOWI once
+repopick 187873 # wifi-hal: stop the UMAC logspam
+repopick 187874 # Wifi: Quiet some excessive debug output
 
-echo "av commits picked successfully"
+# packages/apps/FMRadio
+repopick 186688 # FMRadio: jni: Add missing liblog dependency
 
-echo "cherry-picking fwb commits"
+# packages/providers/TelephonyProvider
+repopick 185944 # telephony: Add support for choosing a default APN
+repopick 185945 # TelephonyProvider: Fix Default APN Preference Overlay on 1st Boot
 
-repopick 186228 187154 187851
+# packages/services/Telephony
+repopick 187147 # Fix MobileNetworkSettings crash for multi-SIM device
 
-echo "fwb commits picked successfully"
+# system/core
+repopick 188765 # init: Fire a trigger when a class is started/stopped
 
-echo "cherry-picking native commits"
+# system/qcom
+repopick 187634 # qsap: Don't log sensitive information
+repopick 187635 # qsap: Put files in a sane location
+repopick 187636 # qsap: Kill more logspam
+repopick 187637 # Implement wifi_qsap_set_tx_power
 
-repopick 185879 185880 185881 185882 187152
-
-echo "native commits picked successfully"
-
-echo "cherry-picking libhardware commits"
-
-repopick 187643 187644
-
-echo "libhardware commits picked successfully"
-
-echo "cherry-picking system/sepolicy commits"
-
-repopick 186243 186244 186245 186246
-
-echo "system/sepolicy commits picked successfully"
-
-echo "cherry-picking system/core commits"
-
-repopick 185888 186304 185653 185656 185657 185658 186881 187146 185642
-
-echo "system/core commits picked successfully"
-
-echo "cherry-picking system/qcom commits"
-
-repopick 187634 187635 187636 187637
-
-echo "system/qcom commits picked successfully"
-
-echo "cherry-picking vendor/lineage commits"
-
-repopick 187951 185491 187574 185521
-
-echo "vendor/lineage commits picked successfully"
+# vendor/lineage
+repopick 187951 # lineage: healthd: add CFLAG around power off alarm via legacy alarm driver
+repopick 185521 # libhealthd: Add libbase and libminui static libraries
+repopick 185491 # overlay: Disable unusupported breaking overlays
+repopick 188278 # build: soong: put lineage variables in the "Lineage" struct
+repopick 185870 # soong_config: Add TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS
