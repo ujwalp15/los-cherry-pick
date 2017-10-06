@@ -22,9 +22,6 @@ repopick 187765 # ril: Allow targets to disable Clang
 # packages/apps/FMRadio
 repopick 186688 # FMRadio: jni: Add missing liblog dependency
 
-# packages/services/Telephony
-repopick 187147 # Fix MobileNetworkSettings crash for multi-SIM device
-
 # system/qcom
 repopick 187634 # qsap: Don't log sensitive information
 repopick 187635 # qsap: Put files in a sane location
