@@ -4,6 +4,7 @@ repopick 185640 # linker: Add support for dynamic SHIM libraries
 # device/lineage/sepolicy
 repopick 190625 # sepolicy: qcom: Label /data/time as time_data_file
 repopick 190643 # sepolicy: qcom: Import bluetooth_loader/hci_attach rules
+repopick 192001 # sepolicy: qcom: Add bunch of labels for devices using 'soc.0' instead of 'soc'
 
 # framework/base
 repopick 190667 # telephony: Add backwards compatibility with pre-oreo blobs (1/2)
@@ -14,10 +15,6 @@ repopick 190668 # telephony: Add backwards compatibility with pre-oreo blobs (2/
 # hardware/libhardware
 repopick 187643 # libhardware: add support for tertiary display
 repopick 187644 # libhardware: Only support tertiary display in QTI_BSP is defined
-
-# hardware/ril-caf
-repopick 187764 # libril: Restore support for RIL v6, v8 and v9 stacks
-repopick 187765 # ril: Allow targets to disable Clang
 
 # packages/apps/FMRadio
 repopick 186688 # FMRadio: jni: Add missing liblog dependency
