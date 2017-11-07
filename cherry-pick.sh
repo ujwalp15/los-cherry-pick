@@ -29,3 +29,25 @@ repopick 187637 # Implement wifi_qsap_set_tx_power
 repopick 190603 # Add system_net_netd_hwservice.
 repopick 190604 # netd: relax binder neverallow rules for hwservices
 repopick 190605 # Hide grep filename output.
+
+# system/vold
+repopick 187720 # Use volume label for mount path, if available.
+repopick 187724 # vold: Add Hardware FDE feature
+repopick 187725 # Treat removable UFS card as SD card
+repopick 187726 # keymaster: Add support for upgrade_key for FDE
+repopick 187727 # add vold to "shutdown critical"
+repopick 187728 # vold: Native exfat driver support
+repopick 187730 # vold: dont't use commas in device names
+repopick 187731 # vold ext4/f2fs: do not use dirsync if we're mounting adopted storage
+repopick 187732 # Fix the group permissions of the sdcard root.
+repopick 187733 # vold: skip first disk change when converting MBR to GPT
+repopick 187734 # vold: Allow reset after shutdown
+repopick 187729 # vold: Native NTFS kernel driver support
+repopick 187735 # vold: Add path to cryptfs_hw
+
+# vendor/qcom/opensource/cryptfs
+repopick 187838 # cryptfs_hw: Remove android reboot during password check
+repopick 187839 # cryptfs_hw: Add new APIs for key management
+repopick 187840 # cryptfs_hw: Fix compilation error
+repopick 192464 # cryptfs_hw: Use HW keymaster for FDE keys
+repopick 192465 # cryptfs_hw: Wait for qseecom daemon to start FDE operation
