@@ -25,6 +25,10 @@ repopick 187635 # qsap: Put files in a sane location
 repopick 187636 # qsap: Kill more logspam
 repopick 187637 # Implement wifi_qsap_set_tx_power
 
+# system/core
+repopick 195138 # android_filesystem_config: Remove AID_QCOM_DIAG entry
+repopick 195139 # Revert "Add AIDs for RFS module".
+
 # system/vold
 repopick 187720 # Use volume label for mount path, if available.
 repopick 187724 # vold: Add Hardware FDE feature
