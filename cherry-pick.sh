@@ -46,3 +46,6 @@ repopick 187839 # cryptfs_hw: Add new APIs for key management
 repopick 187840 # cryptfs_hw: Fix compilation error
 repopick 192464 # cryptfs_hw: Use HW keymaster for FDE keys
 repopick 192465 # cryptfs_hw: Wait for qseecom daemon to start FDE operation
+
+# kryo commits
+repopick -t kryo-libc
