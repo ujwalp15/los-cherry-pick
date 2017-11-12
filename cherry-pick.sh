@@ -1,3 +1,6 @@
+# ant+
+repopick 195302 # ANT: Don't build HIDL varient libantradio for OSS builds
+
 # bionic
 repopick 185640 # linker: Add support for dynamic SHIM libraries
 
@@ -5,6 +8,9 @@ repopick 185640 # linker: Add support for dynamic SHIM libraries
 repopick 190625 # sepolicy: qcom: Label /data/time as time_data_file
 repopick 190643 # sepolicy: qcom: Import bluetooth_loader/hci_attach rules
 repopick 192001 # sepolicy: qcom: Add bunch of labels for devices using 'soc.0' instead of 'soc'
+
+# external/toybox
+repopick 196049 # toybox: Allow building vendor toybox on non-Treble devices
 
 # framework/base
 repopick 190667 # telephony: Add backwards compatibility with pre-oreo blobs (1/2)
@@ -53,3 +59,7 @@ repopick 192465 # cryptfs_hw: Wait for qseecom daemon to start FDE operation
 
 # kryo commits
 repopick -t kryo-libc
+repopick -t kryo-libc-caf
+
+# op3-O
+repopick -t op3-O
