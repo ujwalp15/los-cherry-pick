@@ -1,16 +1,10 @@
 # ant+
 repopick 195302 # ANT: Don't build HIDL varient libantradio for OSS builds
 
-# bionic
-repopick 185640 # linker: Add support for dynamic SHIM libraries
-
 # device/lineage/sepolicy
 repopick 190625 # sepolicy: qcom: Label /data/time as time_data_file
 repopick 190643 # sepolicy: qcom: Import bluetooth_loader/hci_attach rules
 repopick 192001 # sepolicy: qcom: Add bunch of labels for devices using 'soc.0' instead of 'soc'
-
-# external/toybox
-repopick 196049 # toybox: Allow building vendor toybox on non-Treble devices
 
 # framework/base
 repopick 190667 # telephony: Add backwards compatibility with pre-oreo blobs (1/2)
@@ -22,9 +16,6 @@ repopick 190668 # telephony: Add backwards compatibility with pre-oreo blobs (2/
 repopick 187643 # libhardware: add support for tertiary display
 repopick 187644 # libhardware: Only support tertiary display in QTI_BSP is defined
 
-# packages/apps/FMRadio
-repopick 186688 # FMRadio: jni: Add missing liblog dependency
-
 # system/qcom
 repopick 187634 # qsap: Don't log sensitive information
 repopick 187635 # qsap: Put files in a sane location
@@ -32,8 +23,7 @@ repopick 187636 # qsap: Kill more logspam
 repopick 187637 # Implement wifi_qsap_set_tx_power
 
 # system/core
-repopick 195138 # android_filesystem_config: Remove AID_QCOM_DIAG entry
-repopick 195139 # Revert "Add AIDs for RFS module".
+repopick -t oreo-bfqio
 
 # system/vold
 repopick 187720 # Use volume label for mount path, if available.
@@ -58,8 +48,18 @@ repopick 192464 # cryptfs_hw: Use HW keymaster for FDE keys
 repopick 192465 # cryptfs_hw: Wait for qseecom daemon to start FDE operation
 
 # kryo commits
-repopick -t kryo-libc
+# repopick -t kryo-libc
 repopick -t kryo-libc-caf
 
 # op3-O
-repopick -t op3-O
+cd device/oneplus/oneplus3
+git pull https://review.lineageos.org/LineageOS/android_device_oneplus_oneplus3 refs/changes/81/196581/1
+git checkout FETCH_HEAD
+cd ../../..
+
+cd kernel/oneplus/msm8996
+git pull https://review.lineageos.org/LineageOS/android_kernel_oneplus_msm8996 refs/changes/83/196583/1
+git checkout FETCH_HEAD
+cd ../../..
+
+repopick 196586 -P hardware/qcom/display-caf/msm8996
